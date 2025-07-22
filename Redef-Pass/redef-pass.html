@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Confirme seu cadastro</title>
+    <title>Redefinição de senha</title>
     <style>
         /* Reset básico */
         * {
@@ -15,7 +15,7 @@
         /* Estilos gerais */
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 0;
+            line-height: 1.6;
             color: #333333;
             background-color: #f4f4f4;
             margin: 0;
@@ -49,7 +49,7 @@
         
         /* Conteúdo principal */
         .content {
-            padding: 35px;
+            padding: 40px 35px 35px 35px;
             background-color: #ffffff;
         }
         
@@ -57,26 +57,27 @@
             color: #4191A2;
             font-size: 18px;
             font-weight: 600;
-            margin-bottom: 22px;
+            margin-bottom: 25px;
             text-align: left;
+            line-height: 1.3;
         }
         
         .content p {
             color: #9A979E;
             font-size: 14px;
-            margin-bottom: 14px;
+            margin-bottom: 20px;
             line-height: 1.5;
             text-align: left;
         }
         
         .content p.instruction {
-            margin-bottom: 30px;
+            margin-bottom: 35px;
         }
         
         /* Botão de confirmação */
         .button-container {
             text-align: center;
-            margin: 30px 0;
+            margin: 35px 0 40px 0;
         }
         
         .confirmation-button {
@@ -84,7 +85,7 @@
             background: #0F7185;
             color: white !important;
             text-decoration: none;
-            padding: 20px 40px;
+            padding: 15px 35px;
             border-radius: 8px;
             font-size: 16px;
             font-weight: 600;
@@ -92,12 +93,12 @@
             transition: all 0.3s ease;
             border: none;
             cursor: pointer;
-            box-shadow: 0 2px 10px rgba(73, 144, 226, 0.3);
+            box-shadow: 0 2px 10px rgba(15, 113, 133, 0.3);
         }
         
         .confirmation-button:hover {
             transform: translateY(-2px);
-            box-shadow: 0 4px 15px rgba(73, 144, 226, 0.4);
+            box-shadow: 0 4px 15px rgba(15, 113, 133, 0.4);
         }
         
         /* Linha divisória */
@@ -110,16 +111,20 @@
         
         /* Texto de aviso */
         .warning-text {
-            color: #4191A2;
+            color: #9A979E;
             font-size: 13px;
             line-height: 1.5;
             margin-bottom: 15px;
         }
         
+        .warning-text:last-child {
+            margin-bottom: 0;
+        }
+        
         /* Rodapé */
         .footer {
             background-color: #F8F9FB;
-            padding: 30px 35px;
+            padding: 25px 35px;
             text-align: center;
             border-top: 1px solid #e9ecef;
         }
@@ -153,7 +158,7 @@
             }
             
             .content {
-                padding: 25px 20px;
+                padding: 30px 20px 25px 20px;
             }
             
             .footer {
@@ -166,11 +171,16 @@
             
             .content h2 {
                 font-size: 16px;
+                margin-bottom: 20px;
             }
             
             .confirmation-button {
                 padding: 14px 30px;
                 font-size: 15px;
+            }
+            
+            .button-container {
+                margin: 30px 0 35px 0;
             }
         }
     </style>
@@ -179,35 +189,33 @@
     <div class="email-container">
         <!-- Cabeçalho -->
         <div class="header">
-            <h1>Bem-vindo(a) ao Menvo!</h1>
+            <h1>Redefinição de senha</h1>
         </div>
         
         <!-- Conteúdo Principal -->
         <div class="content">
-            <h2>Confirme o seu endereço de email:</h2>
+            <h2>Recebemos a sua solicitação para a atualização da senha da sua conta no Menvo!</h2>
             
-            <p>Obrigado por se cadastrar! Para completar o seu registro e garantir a segurança da sua conta, precisamos verificar seu endereço de email.</p>
-            
-            <p class="instruction">Clique no botão abaixo para confirmar seu email:</p>
+            <p class="instruction">Clique no botão abaixo para ser redirecionado para a alteração da senha:</p>
             
             <!-- Botão de Confirmação -->
             <div class="button-container">
-                <a href="{{ .ConfirmationURL }}" class="confirmation-button">
-                    Confirmar Email
+                <a href="{{ .ResetURL }}" class="confirmation-button">
+                    Redefinir senha
                 </a>
             </div>
 
             <div class="divider"></div>
             
-            <p class="warning-text"><strong>Este link expirará em 24 horas por motivos de segurança.</strong></p>
+            <p class="warning-text">Este link expirará em 24 horas por motivos de segurança.</p>
             
-            <p class="warning-text">Se você não se cadastrou em nossa plataforma, pode ignorar este email com segurança.</p>
+            <p class="warning-text">Se você não solicitou a mudança, pode ignorar este email com segurança.</p>
         </div>
         
         <!-- Rodapé -->
         <div class="footer">
             <p>Este email foi enviado automaticamente. Por favor, não responda.</p>
-            <p>&copy; 2025 MENVO. Todos os direitos reservados.</p>
+            <p>2025 MENVO. Todos os direitos reservados.</p>
         </div>
     </div>
 </body>
